@@ -1,19 +1,13 @@
-// Portfolio data aligned with CV (Eleni Zafeiri)
+﻿// Portfolio data aligned with CV (Eleni Zafeiri)
 export const portfolioData = {
   personal: {
     name: "Eleni Zafeiri",
-    title: "Computer Science Student & Product Owner",
     tagline:
-      "Athens · Informatics & Telecommunications (NKUA) · Product Owner",
-    bio: "I am a second-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.54/10. I graduated with honors from my high school (Grade: 19.7/20 & Panhellenic exams: 19.000/20.000). After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in technology and product management, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to high school students in Informatics. My goal is to keep growing, while also helping others develop and succeed in technology.",
+      "Athens - Informatics & Telecommunications (NKUA) - Software Engineer",
+    bio: "I am a second-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.54/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
     email: "elenzaff@icloud.com",
     location: "Athens, Greece",
     resume_url: "/resume.pdf",
-    spoken_languages: [
-      "English (C2: ECPE, LRN) — fluent",
-      "French (B2: DELF) — fluent",
-      "Greek — native",
-    ],
     social_links: {
       github: "https://github.com/feirw",
       linkedin: "https://www.linkedin.com/in/elenizafeiri",
@@ -22,31 +16,27 @@ export const portfolioData = {
   },
 
   skills: {
-    languages: ["C", "C++", "Java", "JavaScript", "HTML", "CSS"],
+    languages: ["C", "C++", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL"],
     frameworks: ["React.js", "Tailwind CSS", "WordPress"],
     concepts: [
-      "Product discovery",
-      "Requirements & MVP",
-      "Feature prioritization",
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming",
+      "Git & Version Control",
       "Agile / Scrum",
-      "Stakeholder communication",
-      "User-centered design",
-      "Risk management",
-      "Prompt engineering",
-      "GenAI for PM & sales",
-      "Mobile app design & development",
-      "Startup development & pitching",
-      "ESG & innovation challenges",
+      "Testing & Debugging",
+      "Prompt Engineering & GenAI",
+      "Linux / Command Line",
+      "Responsive Web Design",
+      "Software Architecture",
     ],
   },
 
   softskills: {
     corporate: [
-      "Cross-functional coordination",
-      "Requirements → technical specs",
-      "Event & hackathon planning",
-      "Mentoring & workshops",
-      "Hands-on digital literacy support",
+      "Problem solving & analytical thinking",
+      "Organizational & communicative",
+      "Meets deadlines",
+      "Consistent & professional",
     ],
   },
 
@@ -55,7 +45,7 @@ export const portfolioData = {
       id: 1,
       title: "Website for CS students",
       description:
-        "TechnotesGR is a modern, student-first platform that helps high-school candidates prepare for the Panhellenic Informatics exam. It combines fast quizzes with instant feedback, clean flashcards, a supportive community forum, a study timer, a progress tracker, and a friendly AI chatbot—wrapped in a responsive, elegant UI with dark mode. Built for speed, stability, and great UX.",
+        "TechnotesGR is a modern, student-first platform that helps high-school candidates prepare for the Panhellenic Informatics exam. It combines fast quizzes with instant feedback, clean flashcards, a supportive community forum, a study timer, a progress tracker, and a friendly AI chatbot - wrapped in a responsive, elegant UI with dark mode. Built for speed, stability, and great UX.",
       technologies: ["React.js", "Tailwind CSS", "TypeScript", "JavaScript", "Python"],
       features: [
         "Smart quizzes with instant feedback (local-first, retry on reconnect)",
@@ -84,28 +74,28 @@ export const portfolioData = {
     {
       id: 1,
       company: "HongLong",
-      position: "Product Owner",
-      duration: "9/2025 – Present",
+      position: "Software Engineer",
+      duration: "9/2025 - Present",
       location: "Remote",
       description:
-        "Joined as Web Developer (9/2025); promoted to Product Owner (2/2026). Owns product prioritization, roadmap alignment, and stakeholder communication for the educational platform, while continuing to maintain and evolve the organization’s WordPress site.",
+        "Software engineer for an educational platform built on WordPress. Building and maintaining the site, resolving technical issues, and shipping features that improve the user experience.",
       achievements: [
-        "Promoted to Product Owner in 2/2026, leading product decisions and cross-functional alignment.",
-        "Maintained and updated the WordPress site; resolved an average of ~7 technical support tickets weekly in the earlier web-focused phase.",
-        "Reduced website errors by 40% within the first six months through systematic fixes and quality improvements.",
+        "Maintained and evolved the WordPress site, shipping regular feature updates and improvements.",
+        "Resolved an average of ~7 technical support tickets weekly, systematically debugging and fixing issues.",
+        "Reduced website errors by 40% within the first six months through code quality improvements and automated checks.",
       ],
     },
     {
       id: 2,
       company: "Threenitas",
-      position: "Project Manager Intern",
-      duration: "9/2025 – 10/2025",
-      location: "Hybrid,Athens, Greece",
+      position: "Technical Project Manager",
+      duration: "9/2025 - 10/2025",
+      location: "Hybrid, Athens, Greece",
       description:
-        "Supported delivery of digital solutions by aligning business and engineering around clear scope and timelines.",
+        "Contributed to delivery of digital solutions, working closely with engineering teams on implementation and technical specifications.",
       achievements: [
-        "Coordinated cross-functional teams of 5+ members for timely delivery.",
-        "Translated business requirements into clear technical specifications for engineering teams.",
+        "Collaborated with cross-functional teams of 5+ engineers for timely delivery of software projects.",
+        "Translated business requirements into clear technical specifications and implementation plans.",
       ],
     },
   ],
@@ -113,7 +103,7 @@ export const portfolioData = {
   education: {
     degree: "Bachelor of Science in Computer Science",
     university: "National and Kapodistrian University of Athens",
-    duration: "9/2024 – 6/2028",
+    duration: "9/2024 - 6/2028",
     gpa: "8.54/10",
     relevant_courses1: [
       "Computer Fundamentals",
@@ -127,42 +117,12 @@ export const portfolioData = {
       "Computer Networks",
       "Operating Systems",
       "Software Engineering",
-      "Human–Computer Interaction",
-      "Project & Product Management",
-    ],
-    relevant_courses2: [
-      "Computer Science",
-      "Microeconomics",
-      "Calculus",
-      "Linear Algebra",
-      "Technology",
-    ],
-    achievements2: [
-      "Top 1% Panhellenic performance (19.00/20.00) — Eurobank recognition.",
-      "Highest academic performance — General High School of Spercheiada (19.7/20); recognition by Cultural Center of Lamia & LamiaReport.",
+      "Human-Computer Interaction",
     ],
   },
 
   /* Certificates: reverse chronological (newest first) by issue month/year */
   certificates: [
-    {
-      id: 10,
-      title: "Product Launches (PRLC)",
-      issuer: "Product School",
-      date: "1/2026",
-      description:
-        "Product launch lifecycle and execution — MVP definition, feature prioritization, go-to-market alignment, and cross-functional coordination for successful releases.",
-      link: "https://productschool.com/",
-    },
-    {
-      id: 11,
-      title: "Product Strategy (PSC)",
-      issuer: "Product School",
-      date: "1/2026",
-      description:
-        "Product strategy and roadmap thinking — product management fundamentals, delivery planning, stakeholder alignment, and strategic prioritization.",
-      link: "https://productschool.com/",
-    },
     {
       id: 0,
       title: "Prompt Engineering",
@@ -171,15 +131,6 @@ export const portfolioData = {
       description: "Effective prompting for generative AI workflows.",
       link: "https://www.aws.training/",
       certificatePdf: "/certificates/prompt.pdf",
-    },
-    {
-      id: 1,
-      title: "Project Management",
-      issuer: "Workearly",
-      date: "9/2025",
-      description: "Project management practice and AI integrations in delivery.",
-      link: "https://workearly.gr/",
-      certificatePdf: "/certificates/workearly.pdf",
     },
     {
       id: 3,
@@ -191,20 +142,11 @@ export const portfolioData = {
       certificatePdf: "/certificates/dig.pdf",
     },
     {
-      id: 12,
-      title: "GenAI for Project Management & Sales",
-      issuer: "The Tipping Point in Education",
-      date: "6/2025",
-      description:
-        "Using generative AI in project management and sales — AI for project management, GenAI tooling, and effective AI prompting in professional workflows.",
-      link: "https://www.thetippingpoint.org.gr/",
-    },
-    {
       id: 2,
       title: "Effective Data Communication & Storytelling",
       issuer: "Deloitte",
       date: "1/2025",
-      description: "Data storytelling and pitching ideas with clarity.",
+      description: "Data storytelling and communicating technical findings with clarity.",
       link: "https://www2.deloitte.com/",
       certificatePdf: "/certificates/deloite.pdf",
     },
@@ -212,23 +154,34 @@ export const portfolioData = {
       id: 13,
       title: "Team Leadership & Problem Solving Training",
       issuer: "Linq",
-      date: "1/2025 – 4/2025",
+      date: "1/2025 - 4/2025",
       description:
-        "Training on leading teams and solving problems constructively — leadership, mentoring, personal development, team leadership, creativity and innovation, strategy, and creative problem solving.",
+        "Training on leading teams and solving problems constructively - leadership, mentoring, creativity and innovation, and collaborative problem solving.",
       link: "https://linq.co/",
     },
   ],
 
-  /* Display order: Hook & Grab → Crazy Business Ideas → Greece/Türkiye → Ennovation → Crowdpolicy AI */
   hackathons: [
     {
+      id: 6,
+      title: "Epirus Bank OpenHackathon",
+      organizer: "Bank of Epirus",
+      period: "5/2026",
+      description:
+        "Built a real-time scam detector that identifies fraudulent callers asking for money during phone calls. Implemented audio analysis and pattern recognition to protect bank customers from social engineering attacks.",
+      skills: ["Audio processing", "Pattern recognition", "Real-time systems", "Python"],
+      highlight: "1st place among 45+ competing entries",
+      linkUrl: "https://github.com/artemisln/epirus-shield",
+      linkLabel: "View repository",
+    },
+    {
       id: 3,
-      title: "Hook & Grab — 2nd Blue & Circular Economy Hackathon",
+      title: "Hook & Grab - 2nd Blue & Circular Economy Hackathon",
       organizer: "Odyssea",
       period: "12/2024",
       description:
-        "Full-stack marketplace for second-hand fishing gear and marine pollution awareness; co-defined MVP and shipped under hackathon constraints.",
-      skills: ["Full-stack delivery", "Product discovery", "Sustainability & circular economy"],
+        "Built a full-stack marketplace for second-hand fishing gear and marine pollution awareness; designed the database schema, implemented REST APIs, and delivered a working prototype under hackathon constraints.",
+      skills: ["Full-stack development", "REST APIs", "Database design", "React.js"],
       highlight: "1st place among 10+ competing teams",
       linkUrl: "https://github.com/feirw/hook-and-grab",
       linkLabel: "View repository",
@@ -237,98 +190,97 @@ export const portfolioData = {
       id: 5,
       title: "Crazy Business Ideas",
       organizer: "IST College",
-      period: "11/2025 – 3/2026",
+      period: "11/2025 - 3/2026",
       description:
-        "Entrepreneurship and pitching competition for bold venture concepts. Developed “Luggease”, a tourism-focused business idea spanning traveller needs, market fit, and go-to-market storytelling.",
+        "Developed 'Luggease', a tourism-focused app prototype. Built the technical demo and contributed to system architecture for the pitch.",
       skills: [
-        "Tourism & hospitality",
-        "Entrepreneurship",
-        "Business model & pitching",
-        "Value proposition design",
+        "Prototyping",
+        "System architecture",
+        "Full-stack development",
+        "Technical pitching",
       ],
       highlight: "3rd place among 130 participations",
     },
     {
       id: 1,
-      title: "Startup Development Hackathon — Greece / Türkiye 2025",
+      title: "Startup Development Hackathon - Greece / Turkiye 2025",
       organizer: "Ministry of Foreign Affairs of the Hellenic Republic",
-      period: "12/2024 – 2/2025",
+      period: "12/2024 - 2/2025",
       description:
-        "Greece–Türkiye bilateral programme: intensive startup development sprint with focus on pitching and building a mobile product narrative under time pressure.",
+        "Greece-Turkiye bilateral programme: intensive development sprint building a mobile application prototype under time pressure.",
       skills: [
-        "Pitching ideas",
-        "Startup development",
-        "Mobile application development",
-        "Mobile application design",
+        "Mobile app development",
+        "UI/UX implementation",
+        "Cross-platform development",
+        "Rapid prototyping",
       ],
       highlight: "Semi-finalist",
     },
     {
       id: 2,
-      title: "Business Hackathon “Ennovation”",
+      title: "Business Hackathon 'Ennovation'",
       organizer: "ACE | AUEB (Athens Center for Entrepreneurship)",
-      period: "2/2025 – 6/2025",
+      period: "2/2025 - 6/2025",
       description:
-        "Business and innovation hackathon blending ESG themes, web design, and startup development — from problem framing to demo-ready storytelling.",
+        "Built a web application combining ESG data visualization with an interactive front-end - from architecture design to demo-ready deployment.",
       skills: [
-        "Environmental, Social & Governance (ESG)",
-        "Web design",
-        "Startup development",
-        "Entrepreneurial ideas",
+        "Web development",
+        "Data visualization",
+        "Front-end engineering",
+        "API integration",
       ],
       highlight: "Semi-finalist",
     },
     {
       id: 4,
-      title: "AI Hackathon by Crowdpolicy — AthensGo",
-      organizer: "Crowdpolicy · City of Athens (Apps for Athens)",
+      title: "AI Hackathon by Crowdpolicy - AthensGo",
+      organizer: "Crowdpolicy - City of Athens (Apps for Athens)",
       period: "11/2025",
       description:
-        "AI hackathon build: AthensGo — accessible, personalized itineraries with persona-driven MVP definition (allergies, mobility, preferences).",
-      skills: ["MVP & persona analysis", "Accessibility-minded product", "AI product scoping"],
+        "Built AthensGo - an AI-powered itinerary generator with accessibility features. Implemented persona-driven recommendations (allergies, mobility, preferences) and integrated generative AI APIs.",
+      skills: ["AI/ML integration", "API development", "Accessibility", "Python"],
       highlight: "Participated",
       linkUrl: "https://github.com/Apps4Athens-Hackathon-2-0/39_AthensGo",
       linkLabel: "View repository",
     },
   ],
 
-  /* Volunteer: ongoing first, then reverse chronological by end / recency */
   volunteer: [
     {
       id: 1,
       role: "Project Manager",
       organization: "DiT Coding Club (NKUA)",
-      duration: "12/2024 – Present",
+      duration: "12/2024 - Present",
       location: "Hybrid, Athens",
       description:
-        "Planned and coordinated 4+ hackathons and tech events, managing organizing teams of 10+ members and supporting 150+ student participants.",
+        "Planned and coordinated 4+ hackathons and tech events, managing organizing teams of 10+ members and supporting 150+ student participants with technical challenges.",
     },
     {
       id: 3,
-      role: "Project Buddy",
+      role: "Tech Mentor",
       organization: "Sistech Global",
-      duration: "9/2025 – 12/2025",
+      duration: "9/2025 - 12/2025",
       location: "Remote",
       description:
-        "Hands-on digital and AI support for 10+ refugee women, building practical technology skills for professional integration.",
-      },
-      {
-        id: 4,
-        role: "Volunteer for Tech Events",
-        organization: "WELEAD",
-        duration: "2/2025 – 5/2025",
-        location: "Athens, Greece",
-        description:
-          "Reinforced coordination of 3+ tech events, assisting with logistics and workshops for 100+ participants.",
-      },
+        "Hands-on digital and AI support for 10+ refugee women, teaching practical technology and programming skills for professional integration.",
+    },
+    {
+      id: 4,
+      role: "Volunteer for Tech Events",
+      organization: "WELEAD",
+      duration: "2/2025 - 5/2025",
+      location: "Athens, Greece",
+      description:
+        "Supported coordination of 3+ tech events, assisting with technical setup, logistics and workshops for 100+ participants.",
+    },
     {
       id: 2,
       role: "Hackathon Coordinator",
-      organization: "Texas A&M University × University of Athens",
-      duration: "2/2025 – 3/2025",
+      organization: "Texas A&M University x University of Athens",
+      duration: "2/2025 - 3/2025",
       location: "Athens, Greece",
       description:
-        "Supported international hackathon operations: logistics and communication for 80+ participants across two universities.",
+        "Supported international hackathon operations: technical infrastructure, logistics and communication for 80+ participants across two universities.",
     },
   ],
 

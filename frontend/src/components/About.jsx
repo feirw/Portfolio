@@ -183,22 +183,6 @@ const About = () => {
                     </div>
                   </div>
                 )}
-
-                {personalInfo.spoken_languages?.length > 0 && (
-                  <div className="pt-6 mt-6 border-t border-zinc-700/60">
-                    <h4 className="text-zinc-300 font-semibold mb-3 flex items-center">
-                      <div className="w-3 h-3 bg-gradient-to-r from-sky-400 to-zinc-200 rounded-full mr-2" />
-                      Languages
-                    </h4>
-                    <ul className="space-y-2 text-sm text-zinc-400 leading-relaxed">
-                      {personalInfo.spoken_languages.map((line) => (
-                        <li key={line} className="border-l-2 border-zinc-700 pl-3">
-                          {line}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             </Card>
           </div>

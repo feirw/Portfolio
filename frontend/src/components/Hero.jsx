@@ -91,10 +91,6 @@ const Hero = () => {
             {personalInfo.name}
           </h1>
 
-          <p className="text-lg sm:text-2xl md:text-3xl text-zinc-300 mb-4 font-light leading-snug max-w-2xl mx-auto">
-            {personalInfo.title}
-          </p>
-
           <p className="text-base sm:text-lg text-zinc-500 max-w-xl mx-auto leading-relaxed">
             {personalInfo.tagline}
           </p>

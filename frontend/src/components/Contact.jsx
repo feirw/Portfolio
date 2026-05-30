@@ -1,26 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { Mail, MapPin, Github, Linkedin, Send, InstagramIcon } from 'lucide-react';
-import { useToast } from './hooks/use-toast';
-import { usePersonalInfo, useContactForm } from './hooks/usePortfolioData';
+import { Mail, MapPin, Github, Linkedin, InstagramIcon } from 'lucide-react';
+import { usePersonalInfo } from './hooks/usePortfolioData';
+// import { Button } from './ui/button';
+// import { Input } from './ui/input';
+// import { Textarea } from './ui/textarea';
+// import { Send } from 'lucide-react';
+// import { useToast } from './hooks/use-toast';
+// import { useContactForm } from './hooks/usePortfolioData';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: ''
+  // });
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-  const { toast } = useToast();
-  
+  // const { toast } = useToast();
+
   const { personalInfo, loading: personalLoading, error: personalError } = usePersonalInfo();
-  const { submitForm, submitting, error: submitError } = useContactForm();
+  // const { submitForm, submitting, error: submitError } = useContactForm();
 
   useEffect(() => {
     if (personalLoading) return undefined;
@@ -41,37 +43,36 @@ const Contact = () => {
     return () => observer.disconnect();
   }, [personalLoading, personalInfo, personalError]);
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleInputChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    try {
-      await submitForm(formData);
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      // Reset form after successful submission
-      setFormData({ name: '', email: '', message: '' });
-    } catch (err) {
-      const description =
-        err?.message ||
-        err?.text ||
-        submitError ||
-        "Please try again later.";
-      toast({
-        title: "Error sending message",
-        description,
-        variant: "destructive"
-      });
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //
+  //   try {
+  //     await submitForm(formData);
+  //     toast({
+  //       title: "Message sent successfully!",
+  //       description: "Thank you for reaching out. I'll get back to you soon.",
+  //     });
+  //     setFormData({ name: '', email: '', message: '' });
+  //   } catch (err) {
+  //     const description =
+  //       err?.message ||
+  //       err?.text ||
+  //       submitError ||
+  //       "Please try again later.";
+  //     toast({
+  //       title: "Error sending message",
+  //       description,
+  //       variant: "destructive"
+  //     });
+  //   }
+  // };
 
   if (personalLoading) {
     return (
@@ -127,9 +128,9 @@ const Contact = () => {
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-zinc-500 to-transparent mx-auto mt-6" />
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14">
+        <div className="max-w-xl mx-auto">
           {/* Contact Information */}
-          <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Card className="bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 hover:border-gray-500 transition-all duration-500 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-white">Let's Connect</CardTitle>
@@ -198,7 +199,7 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Form */}
+          {/* Contact Form - disabled
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <Card className="bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 hover:border-gray-500 transition-all duration-500 backdrop-blur-sm">
               <CardHeader>
@@ -206,77 +207,12 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="contact-name" className="block text-zinc-300 font-medium mb-2 text-sm">
-                      Name
-                    </label>
-                    <Input
-                      id="contact-name"
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Your name"
-                      autoComplete="name"
-                      required
-                      className="bg-zinc-900/80 border-zinc-600 text-white placeholder-zinc-500 focus-visible:ring-white/30 min-h-[48px]"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="contact-email" className="block text-zinc-300 font-medium mb-2 text-sm">
-                      Email
-                    </label>
-                    <Input
-                      id="contact-email"
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="you@example.com"
-                      autoComplete="email"
-                      required
-                      className="bg-zinc-900/80 border-zinc-600 text-white placeholder-zinc-500 focus-visible:ring-white/30 min-h-[48px]"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="contact-message" className="block text-zinc-300 font-medium mb-2 text-sm">
-                      Message
-                    </label>
-                    <Textarea
-                      id="contact-message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Write your message…"
-                      rows={5}
-                      required
-                      className="bg-zinc-900/80 border-zinc-600 text-white placeholder-zinc-500 focus-visible:ring-white/30 resize-y min-h-[120px]"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={submitting}
-                    className="w-full bg-white text-black hover:bg-gray-200 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
-                    {submitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5 mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
+                  ...
                 </form>
               </CardContent>
             </Card>
           </div>
+          */}
         </div>
       </div>
     </section>

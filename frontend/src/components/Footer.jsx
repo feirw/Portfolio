@@ -50,7 +50,6 @@ const Footer = () => {
                 { name: 'Hackathons', href: '#hackathons' },
                 { name: 'Certificates', href: '#certificates' },
                 { name: 'Volunteer', href: '#volunteer' },
-                { name: 'High school', href: '#highschool' },
                 { name: 'Contact', href: '#contact' },
               ].map((link) => (
                 <button
