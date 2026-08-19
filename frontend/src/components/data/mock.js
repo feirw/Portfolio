@@ -110,6 +110,15 @@ export const portfolioData = {
   /* Certificates: reverse chronological (newest first) by issue month/year */
   certificates: [
     {
+      id: 4,
+      title: "Git/GitHub Foundations",
+      issuer: "Microsoft",
+      date: "8/2026",
+      description:
+        "Version control with Git and collaboration on GitHub: repositories, branches, commits, and pull requests.",
+      link: "https://learn.microsoft.com/en-us/training/paths/github-foundations/",
+    },
+    {
       id: 0,
       title: "Prompt Engineering",
       issuer: "Amazon Web Services (AWS)",
