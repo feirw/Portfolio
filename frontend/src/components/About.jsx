@@ -63,7 +63,7 @@ const About = () => {
               Hello, I'm {personalInfo.name}
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
-              I am a secon[d-year student in the Department of Informatics and Telecommunications{' '}
+              I am a 3rd-year student in the Department of Informatics and Telecommunications{' '}
               <Tip title="NKUA" text="National and Kapodistrian University of Athens.">
                 NKUA
               </Tip>{' '}

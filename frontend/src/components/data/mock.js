@@ -4,7 +4,7 @@ export const portfolioData = {
     name: "Eleni Zafeiri",
     tagline:
       "Athens - Informatics & Telecommunications (NKUA) - Software Engineer",
-    bio: "I am a second-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.2/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
+    bio: "I am a 3rd-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.2/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
     email: "elenzaff@icloud.com",
     location: "Athens, Greece",
     social_links: {
@@ -173,7 +173,7 @@ export const portfolioData = {
       organizer: "Odyssea",
       period: "12/2024",
       description:
-        "Built a full-stack marketplace for second-hand fishing gear and marine pollution awareness; designed the database schema, implemented REST APIs, and delivered a working prototype under hackathon constraints.",
+        "We developed an online marketplace where amateur fishers can buy and sell second-hand fishing gear, promoting sustainability and resource reuse in the fishing community.",
       skills: ["Full-stack development", "REST APIs", "Database design", "React.js"],
       highlight: "1st place among 10+ competing teams · $1,500 prize",
       linkUrl: "https://github.com/feirw/hook-and-grab",

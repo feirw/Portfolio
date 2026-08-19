@@ -9,7 +9,7 @@ import ErrorMessage from "./ErrorMessage";
 const Certificates = () => {
   const [visibleItems, setVisibleItems] = useState(new Set());
   const sectionRef = useRef(null);
-  const { certificates, loading, error } = useCertificates();
+  const { certificates, loading, error } = useCertificates() ;
 
   // animation για fade-in με intersection observer
   useEffect(() => {
