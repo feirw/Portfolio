@@ -1,22 +1,44 @@
-import React, { Suspense, lazy } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import { Toaster } from "./components/ui/toaster";
+import React, { Suspense, lazy, useEffect } from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Seo from './components/Seo';
+import JsonLd from './components/JsonLd';
+import CookieConsent from './components/CookieConsent';
+import StickyCta from './components/StickyCta';
+import { Privacy, Terms, ThankYou, NotFound } from './components/Legal';
+import { Toaster } from './components/ui/toaster';
+import { DEFAULT_DESCRIPTION } from './site';
 
-const About = lazy(() => import("./components/About"));
-const Experience = lazy(() => import("./components/Experience"));
-const Projects = lazy(() => import("./components/Projects"));
-const Hackathons = lazy(() => import("./components/Hackathons"));
-const Certificates = lazy(() => import("./components/Certificates"));
-const Volunteer = lazy(() => import("./components/Volunteer"));
-const Contact = lazy(() => import("./components/Contact"));
-const Footer = lazy(() => import("./components/Footer"));
+const About = lazy(() => import('./components/About'));
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Hackathons = lazy(() => import('./components/Hackathons'));
+const Certificates = lazy(() => import('./components/Certificates'));
+const Volunteer = lazy(() => import('./components/Volunteer'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 const Home = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return undefined;
+    const timer = window.setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+    return () => window.clearTimeout(timer);
+  }, [hash]);
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black has-sticky-cta">
+      <Seo
+        title="Eleni Zafeiri | Informatics student, University of Athens"
+        description={DEFAULT_DESCRIPTION}
+        path="/"
+        type="profile"
+      />
+      <JsonLd />
       <a href="#about" className="skip-to-content">
         Skip to main content
       </a>
@@ -46,6 +68,7 @@ const Home = () => {
       <Suspense fallback={null}>
         <Footer />
       </Suspense>
+      <StickyCta />
     </div>
   );
 };
@@ -54,8 +77,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <CookieConsent />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <Toaster />

@@ -78,20 +78,17 @@ const Experience = () => {
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-zinc-500 to-transparent mx-auto mt-6" />
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Education Section */}
-          <div className="mb-16">
+        <div className="max-w-4xl mx-auto space-y-10">
+          <div>
             <h3 className="text-3xl font-bold text-white mb-8 text-center">Education</h3>
-            <Card className="bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 hover:border-gray-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10 backdrop-blur-sm">
+            <Card className="portfolio-card bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700">
               <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <CardTitle className="text-2xl font-bold text-white">
-                    {education.degree}
-                  </CardTitle>
-                  <Badge variant="secondary" className="bg-gray-800 text-gray-300 w-fit mt-2 md:mt-0">
-                    GPA: {education.gpa}
-                  </Badge>
-                </div>
+                <CardTitle className="text-2xl font-bold text-white mb-3">
+                  {education.degree}
+                </CardTitle>
+                <Badge variant="secondary" className="bg-gray-800 text-gray-300 w-fit mb-4">
+                  GPA: {education.gpa}
+                </Badge>
                 
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-400">
@@ -108,12 +105,12 @@ const Experience = () => {
               <CardContent>
                 <div>
                   <h4 className="text-white font-semibold mb-4">Relevant coursework</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {education.relevant_courses1.map((course) => (
                       <Badge
                         key={course}
                         variant="secondary"
-                        className="bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors text-xs"
+                        className="w-full justify-start bg-gray-800 text-gray-300 text-xs border border-transparent hover:border-violet-500/50 hover:text-white"
                       >
                         {course}
                       </Badge>
@@ -124,35 +121,24 @@ const Experience = () => {
             </Card>
           </div>
 
-          {/* Work experience timeline */}
           {Array.isArray(experience) && experience.length > 0 && (
             <div>
               <h3 className="text-3xl font-bold text-white mb-8 text-center">Work Experience</h3>
-              <div className="relative">
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-600 to-gray-800"></div>
-                
-                <div className="space-y-12">
-                  {experience.map((exp, index) => (
+              <div className="space-y-8">
+                {experience.map((exp, index) => (
                     <div 
                       key={exp.id}
-                      className={`experience-item relative transition-all duration-700 ${
-                        visibleItems.has(index) ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-                      }`}
-                      style={{ transitionDelay: `${index * 300}ms` }}
+                      className="experience-item"
                       data-index={index}
                     >
-                      <div className="absolute left-6 w-4 h-4 bg-white rounded-full border-4 border-gray-900 z-10"></div>
-                      
-                      <Card className="ml-20 bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 hover:border-gray-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10 group backdrop-blur-sm">
+                      <Card className="portfolio-card bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 group">
                         <CardHeader>
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <CardTitle className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">
-                              {exp.position}
-                            </CardTitle>
-                            <Badge variant="secondary" className="bg-gray-800 text-gray-300 w-fit mt-2 md:mt-0">
-                              {exp.duration}
-                            </Badge>
-                          </div>
+                          <CardTitle className="text-xl font-bold text-white mb-3">
+                            {exp.position}
+                          </CardTitle>
+                          <Badge variant="secondary" className="bg-gray-800 text-gray-300 w-fit mb-4">
+                            {exp.duration}
+                          </Badge>
                           
                           <div className="space-y-2">
                             <div className="flex items-center text-gray-400">
@@ -179,7 +165,7 @@ const Experience = () => {
                             <ul className="space-y-2">
                               {exp.achievements.map((achievement, idx) => (
                                 <li key={idx} className="text-gray-300 flex items-start">
-                                  <div className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                                  <div className="w-2 h-2 bg-white mr-3 mt-2 flex-shrink-0"></div>
                                   <span>{achievement}</span>
                                 </li>
                               ))}
@@ -189,7 +175,6 @@ const Experience = () => {
                       </Card>
                     </div>
                   ))}
-                </div>
               </div>
             </div>
           )}

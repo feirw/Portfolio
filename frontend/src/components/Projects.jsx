@@ -91,9 +91,7 @@ const Projects = () => {
 
     return (
       <Card
-        className={`project-card relative overflow-hidden bg-gradient-to-br from-gray-900/90 to-black/90 border-zinc-700/80 hover:border-zinc-500/90 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40 group cursor-pointer backdrop-blur-sm ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
+        className="project-card portfolio-card relative overflow-hidden bg-gradient-to-br from-gray-900/90 to-black/90 border-zinc-700/80 group cursor-pointer"
         style={{ transitionDelay: `${index * 200}ms` }}
         data-index={index}
         onClick={openDetails}
@@ -209,7 +207,7 @@ const Projects = () => {
                 ? [
                     {
                       href: projects[0].website_url,
-                      label: 'Visit technotesgr.com',
+                      label: 'Visit technotes.gr',
                       Icon: Globe,
                     },
                   ]
@@ -246,7 +244,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-zinc-800/90 text-zinc-300 ring-1 ring-zinc-700/80 transition-all hover:bg-zinc-700 hover:text-white hover:ring-zinc-500/60"
+                className="flex h-12 w-12 items-center justify-center bg-zinc-800/90 text-zinc-300 ring-1 ring-zinc-700/80 transition-all hover:bg-zinc-700 hover:text-white hover:ring-zinc-500/60"
               >
                 {isCustom ? (
                   <Icon className="h-5 w-5" />
@@ -278,7 +276,7 @@ const Projects = () => {
               role="dialog"
               aria-modal="true"
               aria-labelledby="project-dialog-title"
-              className="relative bg-gradient-to-br from-zinc-900 to-black border border-zinc-600/80 max-w-2xl w-full max-h-[min(85vh,720px)] overflow-y-auto shadow-2xl shadow-black/50 rounded-xl"
+              className="relative bg-gradient-to-br from-zinc-900 to-black border border-zinc-600/80 max-w-2xl w-full max-h-[min(85vh,720px)] overflow-y-auto shadow-2xl shadow-black/50"
               onClick={(e) => e.stopPropagation()}
             >
               <Button
@@ -286,7 +284,7 @@ const Projects = () => {
                 variant="ghost"
                 size="icon"
                 onClick={closeModal}
-                className="absolute right-3 top-3 z-10 h-10 w-10 rounded-full text-zinc-400 hover:text-white hover:bg-white/10"
+                className="absolute right-3 top-3 z-10 h-10 w-10 text-zinc-400 hover:text-white hover:bg-white/10"
                 aria-label="Close project details"
               >
                 <X className="h-5 w-5" />

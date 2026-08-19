@@ -1,11 +1,26 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart, Code, Coffee, Instagram } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Github, Linkedin, Mail, Heart, Coffee, Instagram } from 'lucide-react';
 import portfolioData from './data/mock';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const goTo = (hash) => {
+    if (pathname !== '/') {
+      navigate({ pathname: '/', hash: hash.replace('#', '') });
+      return;
+    }
+    document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const scrollToTop = () => {
+    if (pathname !== '/') {
+      navigate('/');
+      return;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -55,10 +70,8 @@ const Footer = () => {
                 <button
                   key={link.name}
                   type="button"
-                  onClick={() => {
-                    document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }}
-                  className="block w-full text-left text-zinc-500 hover:text-white transition-colors duration-200 text-sm py-1 rounded-md hover:translate-x-0.5"
+                  onClick={() => goTo(link.href)}
+                  className="block w-full text-left text-zinc-500 hover:text-white transition-colors duration-200 text-sm py-1 hover:translate-x-0.5"
                 >
                   {link.name}
                 </button>
@@ -82,7 +95,7 @@ const Footer = () => {
                   href={portfolioData.personal.social_links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 bg-zinc-800/80 rounded-lg border border-zinc-700/50 hover:bg-zinc-700 hover:border-zinc-600 transition-all duration-200 hover:-translate-y-0.5 group min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  className="p-2.5 bg-zinc-800/80 border border-zinc-700/50 hover:bg-zinc-700 hover:border-zinc-600 transition-colors duration-200 group min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5 text-zinc-400 group-hover:text-white" />
@@ -91,7 +104,7 @@ const Footer = () => {
                   href={portfolioData.personal.social_links.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 bg-zinc-800/80 rounded-lg border border-zinc-700/50 hover:bg-zinc-700 hover:border-zinc-600 transition-all duration-200 hover:-translate-y-0.5 group min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  className="p-2.5 bg-zinc-800/80 border border-zinc-700/50 hover:bg-zinc-700 hover:border-zinc-600 transition-colors duration-200 group min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 text-zinc-400 group-hover:text-white" />
@@ -101,7 +114,7 @@ const Footer = () => {
                     href={portfolioData.personal.social_links.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-zinc-800/80 rounded-lg border border-zinc-700/50 hover:bg-zinc-700 hover:border-zinc-600 transition-all duration-200 hover:-translate-y-0.5 group min-h-[44px] min-w-[44px] flex items-center justify-center"
+                    className="p-2.5 bg-zinc-800/80 border border-zinc-700/50 hover:bg-zinc-700 hover:border-zinc-600 transition-colors duration-200 group min-h-[44px] min-w-[44px] flex items-center justify-center"
                     aria-label="Instagram"
                   >
                     <Instagram className="w-5 h-5 text-zinc-400 group-hover:text-white" />
@@ -117,10 +130,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-4 text-gray-500 text-sm">
               <span>© {currentYear} {portfolioData.personal.name}</span>
-              <div className="flex items-center space-x-1">
-                <Code className="w-4 h-4" />
-                <span>Built with React</span>
-              </div>
+              <Link to="/privacy" className="hover:text-white">Privacy</Link>
+              <Link to="/terms" className="hover:text-white">Terms</Link>
             </div>
             
             <button
@@ -128,7 +139,7 @@ const Footer = () => {
               className="flex items-center space-x-2 text-gray-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1 group"
             >
               <span className="text-sm">Back to top</span>
-              <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-700 transition-colors">
+              <div className="w-8 h-8 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                 <svg className="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>

@@ -96,15 +96,11 @@ const Certificates = () => {
             certificates.map((cert, index) => (
               <div
                 key={cert.id}
-                className={`certificate-item relative transition-all duration-700 ${
-                  visibleItems.has(index)
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-10"
-                }`}
+                className="certificate-item relative"
                 style={{ transitionDelay: `${index * 200}ms` }}
                 data-index={index}
               >
-                <Card className="bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 hover:border-gray-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10 backdrop-blur-sm">
+                <Card className="portfolio-card bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700">
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <CardTitle className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">
@@ -112,11 +108,7 @@ const Certificates = () => {
                       </CardTitle>
                       <Badge
                         variant="secondary"
-                        className={
-                          cert.id === 13
-                            ? "bg-gray-800 text-gray-200 w-fit mt-2 md:mt-0 text-sm sm:text-base px-3.5 py-2 font-medium tracking-tight shrink-0"
-                            : "bg-gray-800 text-gray-300 w-fit mt-2 md:mt-0"
-                        }
+                        className="bg-gray-800 text-gray-300 w-fit mt-2 md:mt-0"
                       >
                         {cert.date}
                       </Badge>

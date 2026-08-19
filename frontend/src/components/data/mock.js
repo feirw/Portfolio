@@ -4,10 +4,9 @@ export const portfolioData = {
     name: "Eleni Zafeiri",
     tagline:
       "Athens - Informatics & Telecommunications (NKUA) - Software Engineer",
-    bio: "I am a second-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.54/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
+    bio: "I am a second-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.2/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
     email: "elenzaff@icloud.com",
     location: "Athens, Greece",
-    resume_url: "/resume.pdf",
     social_links: {
       github: "https://github.com/feirw",
       linkedin: "https://www.linkedin.com/in/elenizafeiri",
@@ -59,7 +58,7 @@ export const portfolioData = {
         "Admin dashboard: user list (secure endpoint)",
       ],
       github_url: "https://github.com/feirw/technotesgrr",
-      website_url: "https://technotesgr.com/",
+      website_url: "https://www.technotes.gr/",
       status: "in progress",
       technotesgr_social: {
         youtube: "https://www.youtube.com/@technotesgr-elenizafeiri",
@@ -85,26 +84,13 @@ export const portfolioData = {
         "Reduced website errors by 40% within the first six months through code quality improvements and automated checks.",
       ],
     },
-    {
-      id: 2,
-      company: "Threenitas",
-      position: "Technical Project Manager",
-      duration: "9/2025 - 10/2025",
-      location: "Hybrid, Athens, Greece",
-      description:
-        "Contributed to delivery of digital solutions, working closely with engineering teams on implementation and technical specifications.",
-      achievements: [
-        "Collaborated with cross-functional teams of 5+ engineers for timely delivery of software projects.",
-        "Translated business requirements into clear technical specifications and implementation plans.",
-      ],
-    },
   ],
 
   education: {
     degree: "Bachelor of Science in Computer Science",
     university: "National and Kapodistrian University of Athens",
     duration: "9/2024 - 6/2028",
-    gpa: "8.54/10",
+    gpa: "8.2/10",
     relevant_courses1: [
       "Computer Fundamentals",
       "Object-Oriented Programming",
@@ -150,18 +136,25 @@ export const portfolioData = {
       link: "https://www2.deloitte.com/",
       certificatePdf: "/certificates/deloite.pdf",
     },
-    {
-      id: 13,
-      title: "Team Leadership & Problem Solving Training",
-      issuer: "Linq",
-      date: "1/2025 - 4/2025",
-      description:
-        "Training on leading teams and solving problems constructively - leadership, mentoring, creativity and innovation, and collaborative problem solving.",
-      link: "https://linq.co/",
-    },
   ],
 
   hackathons: [
+    {
+      id: 7,
+      title: "OpenAI Community Hackathon",
+      organizer: "OpenAI",
+      period: "7/2026",
+      description:
+        "Reelio is an AI video editing platform that helps creators turn raw videos into polished, ready-to-post content in minutes. It learns each creator’s unique style, automates editing, and supports growth with captions, hashtags, and content ideas.",
+      skills: [
+        "AI video editing",
+        "Generative AI",
+        "Creator tools",
+        "Content automation",
+      ],
+      highlight: "1st place among 8 teams · $5,000 in credits",
+      linkLabel: "Presentation",
+    },
     {
       id: 6,
       title: "Epirus Bank OpenHackathon",
@@ -170,7 +163,7 @@ export const portfolioData = {
       description:
         "Built a real-time scam detector that identifies fraudulent callers asking for money during phone calls. Implemented audio analysis and pattern recognition to protect bank customers from social engineering attacks.",
       skills: ["Audio processing", "Pattern recognition", "Real-time systems", "Python"],
-      highlight: "1st place among 45+ competing entries",
+      highlight: "1st place among 45+ competing entries · $2,500 prize",
       linkUrl: "https://github.com/artemisln/epirus-shield",
       linkLabel: "View repository",
     },
@@ -182,7 +175,7 @@ export const portfolioData = {
       description:
         "Built a full-stack marketplace for second-hand fishing gear and marine pollution awareness; designed the database schema, implemented REST APIs, and delivered a working prototype under hackathon constraints.",
       skills: ["Full-stack development", "REST APIs", "Database design", "React.js"],
-      highlight: "1st place among 10+ competing teams",
+      highlight: "1st place among 10+ competing teams · $1,500 prize",
       linkUrl: "https://github.com/feirw/hook-and-grab",
       linkLabel: "View repository",
     },
@@ -199,49 +192,7 @@ export const portfolioData = {
         "Full-stack development",
         "Technical pitching",
       ],
-      highlight: "3rd place among 130 participations",
-    },
-    {
-      id: 1,
-      title: "Startup Development Hackathon - Greece / Turkiye 2025",
-      organizer: "Ministry of Foreign Affairs of the Hellenic Republic",
-      period: "12/2024 - 2/2025",
-      description:
-        "Greece-Turkiye bilateral programme: intensive development sprint building a mobile application prototype under time pressure.",
-      skills: [
-        "Mobile app development",
-        "UI/UX implementation",
-        "Cross-platform development",
-        "Rapid prototyping",
-      ],
-      highlight: "Semi-finalist",
-    },
-    {
-      id: 2,
-      title: "Business Hackathon 'Ennovation'",
-      organizer: "ACE | AUEB (Athens Center for Entrepreneurship)",
-      period: "2/2025 - 6/2025",
-      description:
-        "Built a web application combining ESG data visualization with an interactive front-end - from architecture design to demo-ready deployment.",
-      skills: [
-        "Web development",
-        "Data visualization",
-        "Front-end engineering",
-        "API integration",
-      ],
-      highlight: "Semi-finalist",
-    },
-    {
-      id: 4,
-      title: "AI Hackathon by Crowdpolicy - AthensGo",
-      organizer: "Crowdpolicy - City of Athens (Apps for Athens)",
-      period: "11/2025",
-      description:
-        "Built AthensGo - an AI-powered itinerary generator with accessibility features. Implemented persona-driven recommendations (allergies, mobility, preferences) and integrated generative AI APIs.",
-      skills: ["AI/ML integration", "API development", "Accessibility", "Python"],
-      highlight: "Participated",
-      linkUrl: "https://github.com/Apps4Athens-Hackathon-2-0/39_AthensGo",
-      linkLabel: "View repository",
+      highlight: "3rd place among 130 participations · 100% master's scholarship",
     },
   ],
 
@@ -250,7 +201,7 @@ export const portfolioData = {
       id: 1,
       role: "Project Manager",
       organization: "DiT Coding Club (NKUA)",
-      duration: "12/2024 - Present",
+      duration: "12/2024 - 3/2026",
       location: "Hybrid, Athens",
       description:
         "Planned and coordinated 4+ hackathons and tech events, managing organizing teams of 10+ members and supporting 150+ student participants with technical challenges.",

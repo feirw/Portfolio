@@ -93,15 +93,11 @@ const Volunteer = () => {
             volunteer.map((vol, index) => (
               <div
                 key={vol.id}
-                className={`volunteer-item relative transition-all duration-700 ${
-                  visibleItems.has(index)
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-10"
-                }`}
+                className="volunteer-item relative"
                 style={{ transitionDelay: `${index * 200}ms` }}
                 data-index={index}
               >
-                <Card className="bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700 hover:border-gray-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/10 backdrop-blur-sm">
+                <Card className="portfolio-card bg-gradient-to-br from-gray-900/90 to-black/90 border-gray-700">
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <CardTitle className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">

@@ -95,14 +95,10 @@ const Hackathons = () => {
             <div
               key={item.id}
               data-index={index}
-              className={`hackathon-item transition-all duration-700 ${
-                visibleItems.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
+              className={`hackathon-item`}
               style={{ transitionDelay: `${index * 120}ms` }}
             >
-              <Card className="bg-gradient-to-br from-zinc-900/90 to-black/90 border-zinc-700/80 hover:border-violet-500/30 transition-all duration-500 backdrop-blur-sm hover:shadow-xl hover:shadow-violet-950/20">
+              <Card className="portfolio-card bg-gradient-to-br from-zinc-900/90 to-black/90 border-zinc-700/80">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
                     <CardTitle className="text-xl font-bold text-white leading-snug pr-2">
@@ -151,16 +147,51 @@ const Hackathons = () => {
                       </div>
                     </div>
                   )}
-                  {item.linkUrl && (
-                    <a
-                      href={item.linkUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm text-violet-300 hover:text-white transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      {item.linkLabel || "Open link"}
-                    </a>
+                  {(item.thumbnail || item.linkUrl) && (
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-3">
+                      {item.thumbnail && (
+                        item.linkUrl ? (
+                          <a
+                            href={item.linkUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full sm:w-48 shrink-0 border border-zinc-700/80 bg-zinc-900 overflow-hidden"
+                            aria-label={item.linkLabel || "Presentation"}
+                          >
+                            <img
+                              src={item.thumbnail}
+                              alt={`Presentation thumbnail for ${item.title}`}
+                              className="w-full aspect-video object-cover"
+                            />
+                            <span className="block px-3 py-2 text-xs text-zinc-400 border-t border-zinc-700/80">
+                              {item.linkLabel || "Presentation"}
+                            </span>
+                          </a>
+                        ) : (
+                          <div className="w-full sm:w-48 shrink-0 border border-zinc-700/80 bg-zinc-900 overflow-hidden">
+                            <img
+                              src={item.thumbnail}
+                              alt={`Presentation thumbnail for ${item.title}`}
+                              className="w-full aspect-video object-cover"
+                            />
+                            <span className="block px-3 py-2 text-xs text-zinc-400 border-t border-zinc-700/80">
+                              {item.linkLabel || "Presentation"}
+                            </span>
+                          </div>
+                        )
+                      )}
+                      {item.linkUrl && !item.thumbnail && (
+                        <a
+                          href={item.linkUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-white transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          {item.linkLabel || "Open link"}
+                        </a>
+                      )}
+                    </div>
                   )}
                 </CardContent>
               </Card>
