@@ -61,6 +61,7 @@ const Footer = () => {
               {[
                 { name: 'About', href: '#about' },
                 { name: 'Experience', href: '#experience' },
+                { name: 'Clients', href: '#clients' },
                 { name: 'Projects', href: '#projects' },
                 { name: 'Hackathons', href: '#hackathons' },
                 { name: 'Certificates', href: '#certificates' },

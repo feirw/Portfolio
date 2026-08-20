@@ -86,6 +86,27 @@ export const portfolioData = {
     },
   ],
 
+  clientWork: [
+    {
+      id: 1,
+      title: "Kathargios Group",
+      role: "Website",
+      description:
+        "Company website for earthworks, aggregate transport, and national haulage - family business based in Fthiotida.",
+      url: "https://www.kathargios-group.gr/",
+      image: "/clients/kathargios.jpg",
+    },
+    {
+      id: 2,
+      title: "Sotiria Chatzimarkou",
+      role: "Website",
+      description:
+        "Academic personal website for a PhD candidate in mathematics at the University of Patras.",
+      url: "https://sotirias-personal-portfolio.vercel.app/",
+      image: "/clients/sotiria.jpg",
+    },
+  ],
+
   education: {
     degree: "Bachelor of Science in Computer Science",
     university: "National and Kapodistrian University of Athens",

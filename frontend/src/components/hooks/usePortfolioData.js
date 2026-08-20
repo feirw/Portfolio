@@ -36,6 +36,11 @@ export const useExperience = () => {
   return { experience: data, loading, error };
 };
 
+export const useClientWork = () => {
+  const { data, loading, error } = useMockData(portfolioData.clientWork);
+  return { clientWork: data, loading, error };
+};
+
 // Custom hook for education
 export const useEducation = () => {
   const { data, loading, error } = useMockData(portfolioData.education);
