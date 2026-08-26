@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Github } from 'lucide-react';
 import { usePersonalInfo } from './hooks/usePortfolioData';
 
-const SECTION_IDS = ['about', 'experience', 'clients', 'projects', 'hackathons', 'certificates', 'volunteer', 'contact'];
+const SECTION_IDS = ['about', 'experience', 'projects', 'hackathons', 'certificates', 'volunteer', 'contact'];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,6 @@ const Navbar = () => {
   const navItems = [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Clients', href: '#clients' },
     { name: 'Projects', href: '#projects' },
     { name: 'Hackathons', href: '#hackathons' },
     { name: 'Certificates', href: '#certificates' },

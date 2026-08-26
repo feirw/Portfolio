@@ -513,29 +513,3 @@ html {
     border-color: rgb(139 92 246 / 0.55) !important;
     box-shadow: 0 16px 40px rgb(76 29 149 / 0.28);
 }
-
-@media (max-width: 760px) {
-    .has-sticky-cta,
-    body:has(.sticky-cta) {
-        padding-bottom: 4.4rem;
-    }
-
-    .sticky-cta {
-        display: flex;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 30;
-        justify-content: center;
-        padding: 0.85rem 1rem;
-        background: #dcc8a8;
-        color: #0c0b09;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .cookie-banner {
-        bottom: 4.4rem;
-    }
-}

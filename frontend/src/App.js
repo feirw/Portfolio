@@ -6,14 +6,12 @@ import Hero from './components/Hero';
 import Seo from './components/Seo';
 import JsonLd from './components/JsonLd';
 import CookieConsent from './components/CookieConsent';
-import StickyCta from './components/StickyCta';
 import { Privacy, Terms, ThankYou, NotFound } from './components/Legal';
 import { Toaster } from './components/ui/toaster';
 import { DEFAULT_DESCRIPTION } from './site';
 
 const About = lazy(() => import('./components/About'));
 const Experience = lazy(() => import('./components/Experience'));
-const ClientWork = lazy(() => import('./components/ClientWork'));
 const Projects = lazy(() => import('./components/Projects'));
 const Hackathons = lazy(() => import('./components/Hackathons'));
 const Certificates = lazy(() => import('./components/Certificates'));
@@ -32,7 +30,7 @@ const Home = () => {
     return () => window.clearTimeout(timer);
   }, [hash]);
   return (
-    <div className="min-h-screen bg-black has-sticky-cta">
+    <div className="min-h-screen bg-black">
       <Seo
         title="Eleni Zafeiri | Informatics student, University of Athens"
         description={DEFAULT_DESCRIPTION}
@@ -52,9 +50,6 @@ const Home = () => {
         <Experience />
       </Suspense>
       <Suspense fallback={null}>
-        <ClientWork />
-      </Suspense>
-      <Suspense fallback={null}>
         <Projects />
       </Suspense>
       <Suspense fallback={null}>
@@ -72,7 +67,6 @@ const Home = () => {
       <Suspense fallback={null}>
         <Footer />
       </Suspense>
-      <StickyCta />
     </div>
   );
 };

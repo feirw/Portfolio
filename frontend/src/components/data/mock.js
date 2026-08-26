@@ -49,13 +49,11 @@ export const portfolioData = {
       features: [
         "Smart quizzes with instant feedback (local-first, retry on reconnect)",
         "Flashcards for fast revision (keyboard navigation, vertical transitions)",
-        "Community forum with user profiles & clean UI",
         "Study timer (start/pause/reset, goals, pink theme)",
         "Progress tracker (interactive syllabus)",
         "Career orientation questionnaire with saved results",
         "Dark mode, responsive design, subtle animations",
-        "Session-based AI chatbot (Google Gemini)",
-        "Admin dashboard: user list (secure endpoint)",
+      
       ],
       github_url: "https://github.com/feirw/technotesgrr",
       website_url: "https://www.technotes.gr/",
@@ -77,33 +75,12 @@ export const portfolioData = {
       duration: "9/2025 - Present",
       location: "Remote",
       description:
-        "Software engineer for an educational platform built on WordPress. Building and maintaining the site, resolving technical issues, and shipping features that improve the user experience.",
+        "Own engineering on a live educational platform used by students and instructors. Scope covers feature delivery, production reliability, and the quality of the day-to-day learning experience.",
       achievements: [
-        "Maintained and evolved the WordPress site, shipping regular feature updates and improvements.",
+        "Maintained and evolved the site, shipping regular feature updates and improvements.",
         "Resolved an average of ~7 technical support tickets weekly, systematically debugging and fixing issues.",
         "Reduced website errors by 40% within the first six months through code quality improvements and automated checks.",
       ],
-    },
-  ],
-
-  clientWork: [
-    {
-      id: 1,
-      title: "Kathargios Group",
-      role: "Website",
-      description:
-        "Company website for earthworks, aggregate transport, and national haulage - family business based in Fthiotida.",
-      url: "https://www.kathargios-group.gr/",
-      image: "/clients/kathargios.jpg",
-    },
-    {
-      id: 2,
-      title: "Sotiria Chatzimarkou",
-      role: "Website",
-      description:
-        "Academic personal website for a PhD candidate in mathematics at the University of Patras.",
-      url: "https://sotirias-personal-portfolio.vercel.app/",
-      image: "/clients/sotiria.jpg",
     },
   ],
 
@@ -116,15 +93,11 @@ export const portfolioData = {
       "Computer Fundamentals",
       "Object-Oriented Programming",
       "Data Structures & Algorithms",
-      "Discrete Mathematics",
-      "Probability & Statistics",
       "Artificial Intelligence",
       "Web Development",
       "Database Systems",
       "Computer Networks",
       "Operating Systems",
-      "Software Engineering",
-      "Human-Computer Interaction",
     ],
   },
 
@@ -204,7 +177,7 @@ export const portfolioData = {
       period: "12/2024",
       description:
         "We developed an online marketplace where amateur fishers can buy and sell second-hand fishing gear, promoting sustainability and resource reuse in the fishing community.",
-      skills: ["Full-stack development", "REST APIs", "Database design", "React.js"],
+      skills: ["Full-stack development", "HTML", "CSS", "JavaScript", "Pitching"],
       highlight: "1st place among 10+ competing teams · $1,500 prize",
       linkUrl: "https://github.com/feirw/hook-and-grab",
       linkLabel: "View repository",
@@ -217,10 +190,9 @@ export const portfolioData = {
       description:
         "Developed 'Luggease', a tourism-focused app prototype. Built the technical demo and contributed to system architecture for the pitch.",
       skills: [
-        "Prototyping",
-        "System architecture",
-        "Full-stack development",
-        "Technical pitching",
+        "Business Analysis",
+        "Product Management",
+        "Technical Pitching",
       ],
       highlight: "3rd place among 130 participations · 100% master's scholarship",
     },
@@ -229,12 +201,12 @@ export const portfolioData = {
   volunteer: [
     {
       id: 1,
-      role: "Project Manager",
+      role: "Technical Project Manager",
       organization: "DiT Coding Club (NKUA)",
       duration: "12/2024 - 3/2026",
       location: "Hybrid, Athens",
       description:
-        "Planned and coordinated 4+ hackathons and tech events, managing organizing teams of 10+ members and supporting 150+ student participants with technical challenges.",
+        "Planned and coordinated hackathons and tech events, managing organizing teams of 10+ members and supporting 150+ student participants with technical challenges.",
     },
     {
       id: 3,
@@ -252,7 +224,7 @@ export const portfolioData = {
       duration: "2/2025 - 5/2025",
       location: "Athens, Greece",
       description:
-        "Supported coordination of 3+ tech events, assisting with technical setup, logistics and workshops for 100+ participants.",
+        "Supported coordination of tech events, assisting with technical setup, logistics and workshops for 100+ participants.",
     },
     {
       id: 2,
@@ -265,14 +237,6 @@ export const portfolioData = {
     },
   ],
 
-  photos: [
-    {
-      url: "/photos/123.jpg",
-      title: "HackHarvard 2025",
-      description: "Volunteering as Social Media Manager for HackHarvard 2025.",
-      tag: "volunteer",
-    },
-  ],
 };
 
 export default portfolioData;

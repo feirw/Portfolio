@@ -78,7 +78,6 @@ export const ThankYou = () => (
     description="Your message was sent. Eleni Zafeiri usually replies within 3–5 working days."
     path="/thank-you"
     noIndex
-    showSticky={false}
     crumbs={[
       { label: 'Home', to: '/' },
       { label: 'Thank you' },

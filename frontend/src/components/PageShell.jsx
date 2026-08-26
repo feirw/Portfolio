@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import StickyCta from './StickyCta';
 import Seo from './Seo';
 import Breadcrumbs from './Breadcrumbs';
 
@@ -12,10 +11,9 @@ const PageShell = ({
   path,
   crumbs,
   noIndex = false,
-  showSticky = true,
 }) => {
   return (
-    <div className="min-h-screen bg-black flex flex-col has-sticky-cta">
+    <div className="min-h-screen bg-black flex flex-col">
       <Seo title={title} description={description} path={path} noIndex={noIndex} />
       <a href="#content" className="skip-to-content">
         Skip to main content
@@ -26,7 +24,6 @@ const PageShell = ({
         {children}
       </main>
       <Footer />
-      {showSticky && <StickyCta />}
     </div>
   );
 };
