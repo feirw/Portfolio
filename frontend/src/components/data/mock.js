@@ -44,7 +44,7 @@ export const portfolioData = {
       id: 1,
       title: "Website for CS students",
       description:
-        "TechnotesGR is a modern, student-first platform that helps high-school candidates prepare for the Panhellenic Informatics exam. It combines fast quizzes with instant feedback, clean flashcards, a supportive community forum, a study timer, a progress tracker, and a friendly AI chatbot - wrapped in a responsive, elegant UI with dark mode. Built for speed, stability, and great UX.",
+        "TechnotesGR is a modern, student-first platform that helps high-school candidates prepare for the Panhellenic Informatics exam. ",
       technologies: ["React.js", "Tailwind CSS", "TypeScript", "JavaScript", "Python"],
       features: [
         "Smart quizzes with instant feedback (local-first, retry on reconnect)",
@@ -53,6 +53,8 @@ export const portfolioData = {
         "Progress tracker (interactive syllabus)",
         "Career orientation questionnaire with saved results",
         "Dark mode, responsive design, subtle animations",
+        "Past exams and questions from the exam",
+        "Online compiler for coding problems",
       
       ],
       github_url: "https://github.com/feirw/technotesgrr",
