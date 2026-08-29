@@ -4,7 +4,7 @@ export const portfolioData = {
     name: "Eleni Zafeiri",
     tagline:
       "Athens - Informatics & Telecommunications (NKUA) - Software Engineer",
-    bio: "I am a 3rd-year student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.2/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
+    bio: "I am a student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.2/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
     email: "elenzaff@icloud.com",
     location: "Athens, Greece",
     social_links: {
@@ -16,7 +16,7 @@ export const portfolioData = {
 
   skills: {
     languages: ["C", "C++", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL"],
-    frameworks: ["React.js", "Tailwind CSS", "WordPress"],
+    frameworks: ["React.js", "Tailwind CSS"],
     concepts: [
       "Data Structures & Algorithms",
       "Object-Oriented Programming",
@@ -89,7 +89,6 @@ export const portfolioData = {
   education: {
     degree: "Bachelor of Science in Computer Science",
     university: "National and Kapodistrian University of Athens",
-    duration: "9/2024 - 6/2028",
     gpa: "8.2/10",
     relevant_courses1: [
       "Computer Fundamentals",
@@ -223,7 +222,7 @@ export const portfolioData = {
       id: 4,
       role: "Volunteer for Tech Events",
       organization: "WELEAD",
-      duration: "2/2025 - 5/2025",
+      duration: "2/2025 - 9/2025",
       location: "Athens, Greece",
       description:
         "Supported coordination of tech events, assisting with technical setup, logistics and workshops for 100+ participants.",
