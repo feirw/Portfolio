@@ -230,7 +230,7 @@ export const portfolioData = {
     {
       id: 2,
       role: "Hackathon Coordinator",
-      organization: "Texas A&M University x University of Athens",
+      organization: "Texas A&M University x UoA",
       duration: "2/2025 - 3/2025",
       location: "Athens, Greece",
       description:
