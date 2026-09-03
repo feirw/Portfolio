@@ -3,7 +3,7 @@ export const portfolioData = {
   personal: {
     name: "Eleni Zafeiri",
     tagline:
-      "Athens - Informatics & Telecommunications (NKUA) - Software Engineer",
+      "Athens - Informatics & Telecommunications (NKUA) - Founder, TechnotesGR",
     bio: "I am a student in the Department of Informatics and Telecommunications NKUA with a current GPA of 8.2/10. After living in a small village without any experience in technology and in just one year at university, I have participated in several hackathons, attended technology events, earned multiple certifications in software development and AI, volunteered in tech-related projects, and built a strong professional network. At the same time, I run a TikTok and Instagram account, where I provide guidance to students in Informatics. My goal is to keep growing as a software engineer, while also helping others develop and succeed in technology.",
     email: "elenzaff@icloud.com",
     location: "Athens, Greece",
@@ -39,50 +39,23 @@ export const portfolioData = {
     ],
   },
 
-  projects: [
-    {
-      id: 1,
-      title: "Website for CS students",
-      description:
-        "TechnotesGR is a modern, student-first platform that helps high-school candidates prepare for the Panhellenic Informatics exam. ",
-      technologies: ["React.js", "Tailwind CSS", "TypeScript", "JavaScript", "Python"],
-      features: [
-        "Smart quizzes with instant feedback (local-first, retry on reconnect)",
-        "Flashcards for fast revision (keyboard navigation, vertical transitions)",
-        "Study timer (start/pause/reset, goals, pink theme)",
-        "Progress tracker (interactive syllabus)",
-        "Career orientation questionnaire with saved results",
-        "Dark mode, responsive design, subtle animations",
-        "Past exams and questions from the exam",
-        "Online compiler for coding problems",
-      
-      ],
-      github_url: "https://github.com/feirw/technotesgrr",
-      website_url: "https://www.technotes.gr/",
-      status: "in progress",
-      technotesgr_social: {
-        youtube: "https://www.youtube.com/@technotesgr-elenizafeiri",
-        instagram: "https://www.instagram.com/technotesgr/",
-        tiktok: "https://www.tiktok.com/@technotesgr",
-        linkedin: "https://www.linkedin.com/company/technotesgr",
-      },
-    },
-  ],
+  projects: [],
 
   experience: [
     {
       id: 1,
-      company: "HongLong",
-      position: "Software Engineer",
-      duration: "9/2025 - Present",
-      location: "Remote",
+      company: "TechnotesGR",
+      position: "Founder",
+      duration: "Present",
+      location: "Athens, Greece",
       description:
-        "Own engineering on a live educational platform used by students and instructors. Scope covers feature delivery, production reliability, and the quality of the day-to-day learning experience.",
+        "Founder of TechnotesGR, a student-first platform that helps high-school candidates prepare for the Panhellenic Informatics exam.",
       achievements: [
-        "Maintained and evolved the site, shipping regular feature updates and improvements.",
-        "Resolved an average of ~7 technical support tickets weekly, systematically debugging and fixing issues.",
-        "Reduced website errors by 40% within the first six months through code quality improvements and automated checks.",
+        "Built and run the product end to end: quizzes, flashcards, study timer, progress tracker, past exams, and an online compiler.",
+        "Shipped a responsive web experience with React, TypeScript, and Python, focused on speed and exam-prep UX.",
+        "Grow the community (over 100k+ views) through TikTok, Instagram, YouTube, and LinkedIn, guiding students in Informatics.",
       ],
+      website_url: "https://www.technotes.gr/",
     },
   ],
 
@@ -201,6 +174,16 @@ export const portfolioData = {
 
   volunteer: [
     {
+      id: 0,
+      role : "Ambassador",
+      organization : "HackathonHub EU",
+      duration : "9/2026 - Present",
+      location : "Athens, Greece",
+      description : "Hackathon Hub EU is a central digital platform that connects and lists hackathons across Europe. It acts as a massive community bridge, bringing together developers, organizers, and local tech communities from over 25 countries.",
+      linkUrl : "https://hackathonhub.eu/",
+      linkLabel : "View website",
+    },
+    {
       id: 1,
       role: "Technical Project Manager",
       organization: "DiT Coding Club (NKUA)",
@@ -227,15 +210,7 @@ export const portfolioData = {
       description:
         "Supported coordination of tech events, assisting with technical setup, logistics and workshops for 100+ participants.",
     },
-    {
-      id: 2,
-      role: "Hackathon Coordinator",
-      organization: "Texas A&M University x University of Athens",
-      duration: "2/2025 - 3/2025",
-      location: "Athens, Greece",
-      description:
-        "Supported international hackathon operations: technical infrastructure, logistics and communication for 80+ participants across two universities.",
-    },
+  
   ],
 
 };

@@ -1,6 +1,6 @@
 # Eleni Zafeiri
 
-> Informatics and Telecommunications student at the National and Kapodistrian University of Athens. Software engineer, founder of TechnotesGR, hackathon participant.
+> Informatics and Telecommunications student at the National and Kapodistrian University of Athens. Founder of TechnotesGR, hackathon participant.
 
 - Site: https://elenizafeiri.com/
 - Email: elenzaff@icloud.com
@@ -10,7 +10,7 @@
 
 ## Pages
 
-- [Home](https://elenizafeiri.com/): About, experience, projects, hackathons, certificates, volunteer work, and contact.
+- [Home](https://elenizafeiri.com/): About, experience, hackathons, certificates, volunteer work, and contact.
 - [Privacy policy](https://elenizafeiri.com/privacy)
 - [Terms of use](https://elenizafeiri.com/terms)
 

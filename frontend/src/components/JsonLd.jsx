@@ -22,7 +22,7 @@ const JsonLd = () => {
           name: personal.name,
           givenName: 'Eleni',
           familyName: 'Zafeiri',
-          jobTitle: 'Informatics student and software engineer',
+          jobTitle: 'Informatics student and founder of TechnotesGR',
           description: personal.bio,
           url: `${SITE_URL}/`,
           image: `${SITE_URL}/photos/123.jpg`,

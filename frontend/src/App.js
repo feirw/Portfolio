@@ -12,7 +12,6 @@ import { DEFAULT_DESCRIPTION } from './site';
 
 const About = lazy(() => import('./components/About'));
 const Experience = lazy(() => import('./components/Experience'));
-const Projects = lazy(() => import('./components/Projects'));
 const Hackathons = lazy(() => import('./components/Hackathons'));
 const Certificates = lazy(() => import('./components/Certificates'));
 const Volunteer = lazy(() => import('./components/Volunteer'));
@@ -48,9 +47,6 @@ const Home = () => {
       </Suspense>
       <Suspense fallback={null}>
         <Experience />
-      </Suspense>
-      <Suspense fallback={null}>
-        <Projects />
       </Suspense>
       <Suspense fallback={null}>
         <Hackathons />

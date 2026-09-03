@@ -74,7 +74,7 @@ const Hero = () => {
           <Button
             className="bg-white text-black hover:bg-zinc-200 px-8 py-6 sm:py-5 text-base font-semibold shadow-lg shadow-white/5 hover:shadow-white/15 transition-all duration-300 min-h-[48px]"
             onClick={() =>
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }
           >
             View my work

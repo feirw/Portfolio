@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Building, Calendar, MapPin, Trophy } from 'lucide-react';
+import { Building, Calendar, MapPin, Trophy, Link as LinkIcon } from 'lucide-react';
 import { useExperience, useEducation } from './hooks/usePortfolioData';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
@@ -149,6 +149,17 @@ const Experience = () => {
                               <MapPin className="w-4 h-4 mr-2" />
                               <span>{exp.location}</span>
                             </div>
+                            {exp.website_url && (
+                              <a
+                                href={exp.website_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center text-gray-400 hover:text-white transition-colors duration-300"
+                              >
+                                <LinkIcon className="w-4 h-4 mr-2 shrink-0" />
+                                <span>Visit website</span>
+                              </a>
+                            )}
                           </div>
                         </CardHeader>
 
